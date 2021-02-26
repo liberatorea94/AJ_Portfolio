@@ -1,7 +1,7 @@
 # AJ_Portfolio
 A portfolio containing data science and research projects.
 
-# Project 1: PCA Dimensionality Reduction Effects on Training Handwritten Digit Classifier
+# [Project 1: PCA Dimensionality Reduction Effects on Training Handwritten Digit Classifier](https://github.com/lees19atwit/DS-Final)
 Created by Sunny Lee (lees19@wit.edu) and AJ Liberatore (liberatorea@wit.edu)
 
 ## Introduction
