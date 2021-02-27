@@ -15,3 +15,5 @@ The objective of this project is to see the effects of dimensionality reduction 
 
 ## Data
 We used the MNIST Handwritten data set. MNIST comes with 60,000 samples of 28x28 handwritten digits and an additional 10,000 samples as training data. Here are 100 samples of the training data set:
+
+![](./mnist.png)
