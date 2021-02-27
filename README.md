@@ -1,7 +1,7 @@
 # AJ_Portfolio
 A portfolio containing data science and research projects.
 
-# Project 1: US Senate Committees Tableau Story
+[# Project 1: US Senate Committees Tableau Story](https://github.com/liberatorea94/US-Senate-Committees)
 Created by AJ Liberatore (liberatorea@wit.edu) and Jayden Butts (buttsj@wit.edu)
 
 ## Introduction
