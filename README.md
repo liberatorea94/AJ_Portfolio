@@ -5,7 +5,7 @@ A portfolio containing data science and research projects.
 Created by AJ Liberatore (liberatorea@wit.edu) and Jayden Butts (buttsj@wit.edu)
 
 ## Summary
-Created a Tableua story to illustrate the interconnectedness of the US Senate, as well as to illustrate issues with diversity. This was accomplished with:
+Created a Tableau story to illustrate the interconnectedness of the US Senate, as well as to illustrate issues with diversity. This was accomplished with:
 * Tableau to create an interactive dashboard, allowing users to explore demographics of specific committees compared to the US as a whole
 * Tableau Story to create a story with points to guide user through how the dashboard works, as well as the technicality of the network visualization
 * Pandas and Numpy to organize and clean Senate committee data so that it may be used in Gephi
