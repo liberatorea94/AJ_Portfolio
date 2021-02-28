@@ -22,8 +22,19 @@ The data we used was collected from two places. We used the [demographics and ec
 # [Project 2: PCA Effects on Training Handwritten Digit Classifier](https://github.com/lees19atwit/DS-Final)
 Created by Sunny Lee (lees19@wit.edu) and AJ Liberatore (liberatorea@wit.edu)
 
-## Introduction
-The objective of this project is to see the effects of dimensionality reduction on training neural networks, specifically to see the effects of dimensionality reduction on a MLPClassifier for recognizing handwritten digits and how dimensionality reduction can help with saving both space and time. 
+## Summary
+The objective of this project was to analyze the effects of dimensionality reduction on training neural networks, specifically to see the effects of PCA dimensionality reduction on a MLPClassifier for recognizing handwritten digits and how dimensionality reduction can help with saving both memory and computation time. 
+
+## Results
+After utilizing PCA, it was recognized that the first 100 components captured quite a lot of variance over the entire training set. Below is a graph of the variance against the number of components.
+
+![](/images/variance.png)
+
+Using a reverse transform, we can intuitively see that the first 100 components give a good approximation to the original dataset.
+
+![](/images/mnistreduced.png)
+
+When we used the reduced train and test set, we achieved an accuracy of 95.95% in about 18 seconds while the original train and test set achieved an accuracy of 96.15% in about 64 seconds.
 
 ## Data
 We used the MNIST Handwritten data set. MNIST comes with 60,000 samples of 28x28 handwritten digits and an additional 10,000 samples as training data. Here are 100 samples of the training data set:
