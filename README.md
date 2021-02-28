@@ -17,7 +17,7 @@ My main work in this project was in collecting and cleaning the Senate committee
 ![](/images/Committee_Network.png)
 
 Though the viz contains some technical jargon, the story specifies the following:
-* There are 136 possible pairs of committees sharing a Senator
+* There are 136 possible pairs of committees
 * There is an average of almost 4 Senators shared among any two committees
 * There are only 12 committee pairs which do not share a Senator
 * 91% of committee pairs share at least one Senator
