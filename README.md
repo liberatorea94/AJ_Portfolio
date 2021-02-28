@@ -14,7 +14,7 @@ Created a Tableua story to illustrate the interconnectedness of the US Senate, a
 ## Visualizations
 My main work in this project was in collecting and cleaning the Senate committee data in order to create out network visualization, as well as assembling the story in Tableau. Below is the network visualization itself.
 
-![](/images/Committee Network.png)
+![](/images/Committee_Network.png)
 
 ## Data
 The data we used was collected from two places. We used the [demographics and economy section of the Kaiser Family Foundation website](https://www.kff.org/state-category/demographics-and-the-economy/) for up to date US demographics, and we used the [US Senate website](https://www.senate.gov/reference/stats_and_lists.htm) to collect information about Senators and committees.
