@@ -13,6 +13,7 @@ Created a Tableua story to illustrate the interconnectedness of the US Senate, a
 
 ## Visualizations
 My main work in this project was in collecting and cleaning the Senate committee data in order to create out network visualization, as well as assembling the story in Tableau. Below is the network visualization itself.
+
 ![](/images/Committee Network.png)
 
 ## Data
