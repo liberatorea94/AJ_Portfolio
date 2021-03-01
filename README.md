@@ -15,7 +15,7 @@ Created a Tableau story to illustrate the interconnectedness of the US Senate, a
 
 The Tableau dashboard provides insight into Senate demographics compared to the US as a whole, contains bios for each Senator in the 116th US Congress, and most importantly allows the user to dig in and come to their own conclusions. Below is a screenshot of the dashboard.
 
-![](/images/Committee_Dashboard.png)
+![](/images/Committee_Dashboard1.png)
 
 Each dot is scaled based on the number of committees and seat of power a Senator holds, and are colored based on their identified party. If the user wishes to view the demographics of a specific group of committees, they may go to the middle of the dashboard and select up to 10 committees they wish to view.
 
