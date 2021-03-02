@@ -1,8 +1,8 @@
 # AJ_Portfolio
-A portfolio containing data science and research projects. I can be reached via [LinkedIn](https://www.linkedin.com/in/aj-liberatore-118b551a0/) or [email](liberatorea94@gmail.com).
+A portfolio containing data science and research projects. I can be reached via [LinkedIn](https://www.linkedin.com/in/aj-liberatore-118b551a0/) or email (liberatorea94@gmail.com).
 
 # [Project 1: US Senate Committees](https://github.com/liberatorea94/US-Senate-Committees)
-Created by [AJ Liberatore](liberatorea94@gmail.com) and [Jayden Butts](buttsj@wit.edu). This project had a focus on data collection and data visualization.
+Created by AJ Liberatore (liberatorea94@gmail.com) and Jayden Butts (buttsj@wit.edu). This project had a focus on data collection and data visualization.
 
 ## Summary
 Created a Tableau story to illustrate the interconnectedness of the US Senate, as well as to illustrate issues with diversity. This was accomplished with:
@@ -34,7 +34,7 @@ Though the viz contains some technical jargon, the story specifies the following
 The data we used was collected from two places. We used the [demographics and economy section of the Kaiser Family Foundation website](https://www.kff.org/state-category/demographics-and-the-economy/) for up to date US demographics, and we used the [US Senate website](https://www.senate.gov/reference/stats_and_lists.htm) to collect information about Senators and committees.
 
 # [Project 2: PCA Effects on Training Handwritten Digit Classifier](https://github.com/lees19atwit/DS-Final)
-Created by [Sunny Lee](lees19@wit.edu) and [AJ Liberatore](liberatorea94@gmail.com). This project had a focus on dimensionality reduction and classification.
+Created by Sunny Lee (lees19@wit.edu) and AJ Liberatore (liberatorea94@gmail.com). This project had a focus on dimensionality reduction and classification.
 
 ## Summary
 The objective of this project was to analyze the effects of dimensionality reduction on training neural networks, specifically to see the effects of PCA dimensionality reduction on a MLPClassifier for recognizing handwritten digits and how dimensionality reduction can help with saving both memory and computation time. 
