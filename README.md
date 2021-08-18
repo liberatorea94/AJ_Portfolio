@@ -15,13 +15,13 @@ Created a Tableau story to illustrate the interconnectedness of the US Senate, a
 
 The Tableau dashboard provides insight into Senate demographics compared to the US as a whole, contains bios for each Senator in the 116th US Congress, and most importantly allows the user to dig in and come to their own conclusions. Below is a screenshot of the dashboard.
 
-![](/images/Committee_Dashboard1.png)
+![Committee Dashboard](/images/Committee_Dashboard1.png)
 
 Each dot is scaled based on the number of committees and seat of power a Senator holds, and are colored based on their identified party. If the user wishes to view the demographics of a specific group of committees, they may go to the middle of the dashboard and select up to 10 committees they wish to view.
 
 My main work in this project was in collecting and cleaning the Senate committee data in order to create out network visualization, as well as assembling the story in Tableau. Below is the network visualization itself.
 
-![](/images/Committee_Network.png)
+![Committee Network](/images/Committee_Network.png)
 
 Though the viz contains some technical jargon, the story specifies the following:
 * There are 136 possible pairs of committees
@@ -42,15 +42,15 @@ The objective of this project was to analyze the effects of dimensionality reduc
 ## Results
 After utilizing PCA, it was recognized that the first 100 components captured quite a lot of variance over the entire training set. Below is a graph of the variance against the number of components.
 
-![](/images/variance.png)
+![Variance](/images/variance.png)
 
 Using a reverse transform, we can intuitively see that the first 100 components give a good approximation to the original dataset.
 
-![](/images/mnistreduced.png)
+![Reduced Data](/images/mnistreduced.png)
 
 When we used the reduced train and test set, we achieved an accuracy of 95.95% in about 18 seconds while the original train and test set achieved an accuracy of 96.15% in about 64 seconds.
 
 ## Data
 We used the MNIST Handwritten data set imported with Keras. MNIST comes with 60,000 samples of 28x28 handwritten digits and an additional 10,000 samples as training data. Here are 100 samples of the training data set:
 
-![](/images/mnist.png)
+![mnist Data](/images/mnist.png)
