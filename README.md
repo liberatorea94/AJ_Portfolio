@@ -1,4 +1,5 @@
 # AJ_Portfolio
+## Under Construction as of 09/2025
 A portfolio containing data science and research projects. I can be reached via [LinkedIn](https://www.linkedin.com/in/aj-liberatore-118b551a0/) or email (liberatorea94@gmail.com). A copy of my resume can viewed [here](https://github.com/liberatorea94/AJ_Portfolio/blob/8732c3611dde9687b86cbf72a36d4ab78bf5d3f2/images/Online%20Resume.pdf), up to date with February 2021.
 
 ## About AJ
