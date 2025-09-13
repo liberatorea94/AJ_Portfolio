@@ -3,7 +3,11 @@
 A portfolio containing data science and research projects. I can be reached via [LinkedIn](https://www.linkedin.com/in/aj-liberatore-118b551a0/) or email (liberatorea94@gmail.com). A copy of my resume can viewed [here](https://github.com/liberatorea94/AJ_Portfolio/blob/8732c3611dde9687b86cbf72a36d4ab78bf5d3f2/images/Online%20Resume.pdf), up to date with February 2021.
 
 ## About AJ
-AJ Liberatore is a final year Applied Mathematics student at Wentworth Institute of Technology. At Wentworth, he has pursued a minor in data science, taken up several roles as a math tutor, and has conducted research with professors to investigate dimensional reduction in quantum gravity via diffusion. Upon graduating, he will continue his co-op at The MITRE Corporation as a full-time data scientist.
+AJ Liberatore is a professional data scientist who has specialized in business intelligence and investigative analytics. In previous roles, he has taken on a variety of projects, most notably including the support of VA hiring, training, and project management initiatives as well as contributions to numerous public healthcare programs. 
+
+At his alma mater Wentworth, he conducted research with professors and peers to investigate dimensional reduction in quantum gravity via diffusion which culminated in a January 2025 publication, took up several roles as a tutor, and graduated with high honors earning a bachelor's of science in applied mathematics with a minor in data science. 
+
+In his free time, AJ pursues personal training and fitness, competing in bodybuilding contests since April 2023 and offering online coaching services to help others reach their goals while promoting health and wellness.
 
 # [Project 1: US Senate Committees](https://github.com/liberatorea94/US-Senate-Committees)
 Created by AJ Liberatore (liberatorea94@gmail.com) and Jayden Butts (buttsj@wit.edu). This project had a focus on data collection and data visualization.
