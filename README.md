@@ -1,5 +1,5 @@
+### Under Construction as of 09/2025
 # AJ_Portfolio
-## Under Construction as of 09/2025
 A portfolio containing data science and research projects. I can be reached via [LinkedIn](https://www.linkedin.com/in/aj-liberatore-118b551a0/) or email (liberatorea94@gmail.com). A copy of my resume can viewed [here](https://github.com/liberatorea94/AJ_Portfolio/blob/3f619052f5230c3dd9b8dbc787c245fb2712d74d/images/Online%20Resume%20092025.pdf), up to date with September 2025.
 
 ## About AJ
@@ -9,7 +9,29 @@ At his alma mater Wentworth, he conducted research with professors and peers to 
 
 In his free time, AJ pursues personal training and fitness, competing in bodybuilding contests since April 2023 and offering online coaching services to help others reach their goals while promoting health and wellness.
 
-# [Project 1: US Senate Committees](https://github.com/liberatorea94/US-Senate-Committees)
+# Publications
+
+## [Anomalous diffusion and factor ordering in (1+ 1)-dimensional Lorentzian quantum gravity](https://www.sciencedirect.com/science/article/pii/S0550321324003456?via%3Dihub)
+Authored by Elijah Sanderson (sandersone1@wit.edu), Rachel Lash Maitra (maitrar@wit.edu), AJ Liberatore (liberatorea94@gmail.com). Published in journal Nuclear Physics B on December 17, 2024.
+
+### Abstract
+Using properties of diffusion according to a quantum heat kernel constructed as an expectation over classical heat kernels on, we probe the non-manifold-like nature of quantized space in a model of (1+1)-dimensional quantum gravity. By computing the mean squared displacement of a diffusing particle, we find that diffusion is anomalous, behaving similarly to that on a porous substrate, network, or fractal over short distances. The walk dimension of the path for a particle diffusing in quantized space is calculated to have an infimum of 4, rising to arbitrarily large values depending on a parameter labeling the choice of factor ordering in the quantum Hamiltonian for our model and figuring in the asymptotic behavior of the wavefunction used to construct the quantum heat kernel. Additionally, we derive an expansion for return probability of a diffusing particle, whose modifications from the classical power-series form depend on the factor-ordering parameter.
+
+## [A Hybrid System Dynamics/Input-Output Model for Studying the Impact of Transportation Delays on the Resiliency of National Supply Chains](https://ieeexplore.ieee.org/document/10407498)
+Authored by William S. Bland (wbland@mitre.org), Lissette Escobar (lescobar@mitre.org), Andrew E. Hong (ahong@mitre.org), Grace Kenneally (gkenneally@mitre.org), AJ Liberatore (liberatorea94@gmail.com), Scott L. Rosen (srosen@mitre.org). Published in journal Institute of Electronical and Electronics Engineers on Janyary 31, 2024.
+
+### Abstract
+In today’s globally interconnected economy, transportation delays that impact a specific industry’s supply chain can quickly propagate to other industries, dramatically impacting inventory levels and economic production on the local, state, national, and global levels. This research proposes a hybrid System Dynamics and Input-Output simulation model that represents the impact of transportation delays on the flow of goods across industries and between geographic regions. The model is applied to a case study involving the port of Los Angeles to quantify the direct and indirect effects of a 30- and 60-day delay in container movement on gross output across the 55 major industries in the United States. The capability to predict the scope and scale of the economic impact resulting from various transportation delays provides decision makers the opportunity to conduct preliminary what-if analyses which can support the development of potential mitigation strategies before the actual shock occurs.
+
+# [Package: ACAGPM](https://github.com/mitre/ACAGPM)
+R package authored by AJ Liberatore (liberatorea94@gmail.com) and Principal Investigator Hannah De los Santos, PhD (hdelossantos@mitre.org). 
+
+## Summary
+Particulate Matter (PM2.5) is a term referring to microscopic particles, not greater than 2.5 micro-meters in diameter, suspended in air. These particles have a variety of adverse health effects on humans, given their ability to quickly enter the bloodstream via inhalation.
+
+Research initiatives, especially those relating to climate and human health, can greatly benefit from access to PM2.5 data; this package aims to provide users with easy access to that data by aligning [WUSTL's Atmospheric Composition Analysis Group](https://sites.wustl.edu/acag/) Particulate Matter 2.5 raster files with 2019 state, county, and census tract shape files.
+
+# [Undergrad Project: US Senate Committees](https://github.com/liberatorea94/US-Senate-Committees)
 Created by AJ Liberatore (liberatorea94@gmail.com) and Jayden Butts (buttsj@wit.edu). This project had a focus on data collection and data visualization.
 
 ## Summary
@@ -41,7 +63,7 @@ Though the viz contains some technical jargon, the story specifies the following
 ## Data
 The data we used was collected from two places. We used the [demographics and economy section of the Kaiser Family Foundation website](https://www.kff.org/state-category/demographics-and-the-economy/) for up to date US demographics, and we used the [US Senate website](https://www.senate.gov/reference/stats_and_lists.htm) to collect information about Senators and committees.
 
-# [Project 2: PCA Effects on Training Handwritten Digit Classifier](https://github.com/lees19atwit/DS-Final)
+# [Undergrad Project: PCA Effects on Training Handwritten Digit Classifier](https://github.com/lees19atwit/DS-Final)
 Created by Sunny Lee (lees19@wit.edu) and AJ Liberatore (liberatorea94@gmail.com). This project had a focus on dimensionality reduction and classification.
 
 ## Summary
