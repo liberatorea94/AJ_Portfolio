@@ -7,16 +7,24 @@ import { RouterLink, RouterView } from 'vue-router'
   
   <div class="container">
 
-    <div>
-      <h2 style="text-align: left; padding-left: 50px; color: #3EB489;">AJ_Portfolio</h2>
-        
-      <nav class="main-nav">
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-      </nav>
+    <!-- Upper skirt of the website with nav bar -->
+    <div class="upperskirt">
+      <div class="outercol">
+        <h2 class="title">AJ_Portfolio</h2>
+      </div>
+      <div class="middlecol">
+        <nav class="main-nav">
+          <RouterLink to="/about">About</RouterLink>
+          <RouterLink to="/experience">Experience</RouterLink>
+          <RouterLink to="/projects">Projects</RouterLink>
+          <RouterLink to="/resume">Resume</RouterLink>
+        </nav>
+      </div>
+      <div class="outercol">
+      </div>
     </div>
   
-    
+    <!--  -->
     <main>
       <RouterView />
     </main>
@@ -36,7 +44,7 @@ import { RouterLink, RouterView } from 'vue-router'
 <style scoped>
 
 .container {
-  margin: 5px;
+  /* margin: 5px; */
   /* border: 1px solid; */
   box-sizing: border-box;
   position:absolute;
@@ -46,9 +54,24 @@ import { RouterLink, RouterView } from 'vue-router'
   bottom: 0;
 }
 
+.upperskirt {
+  background-color: #D3D3D3;
+}
+
+.outercol {
+  width: 33.3%;
+  display: inline-block;
+}
+
+.middlecol {
+  width: 33.3%;
+  display: inline-block;
+}
+
 .title {
-  vertical-align: top;
-  top: 0;
+  text-align: left;
+  padding-left: 50px;
+  color: #3EB489;
 }
 
 .main-nav {
@@ -57,7 +80,7 @@ import { RouterLink, RouterView } from 'vue-router'
 }
 
 .main-nav a {
-  width: 150px;
+  width: 170px;
   color: #3EB489;
   font-size: 30px;
   padding-top: .5rem;
