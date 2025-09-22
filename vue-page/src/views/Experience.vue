@@ -5,6 +5,8 @@
 <script setup>
 
 import Timeline from 'primevue/timeline';
+import Tag from 'primevue/tag';
+import { ref } from 'vue';
 
 const events = [
     { title: 'Current Day', date: '09/01/2025', icon: 'pi pi-shopping-cart', color: '#9C27B0', type: 'career',
@@ -35,17 +37,86 @@ const events = [
     { title: 'Start School', date: '08/01/2018', icon: 'pi pi-check', color: '#607D8B', type: 'project' }
 ];
 
-function isTransparent(type) {
-    return type === 'career';
-}
+// function isTransparent(type) {
+//     return type === 'career';
+// }
 
-function getTypeClass(type) {
-    return 'event-${type}';
+// function getTypeClass(type) {
+//     return 'event-${type}';
+// }
+
+const selected = ref('all')
+const options = [
+    { text: 'All', value: 'all' }, 
+    { text: 'Language', value: 'language' },
+    { text: 'Frameworks/Libraries', value: 'library' },
+    { text: 'AI/ML', value: 'ml' },
+    { text: 'Cloud Platforms', value: 'cloud' },
+    { text: 'DevOps/Software', value: 'software' },
+    { text: 'Data Viz', value: 'viz' },
+    { text: 'Techniques', value: 'technique' },
+]
+
+const skillTags = [
+    // Languages
+    { value: 'Python', skill: 'language' },
+    { value: 'Java', skill: 'language' },
+    { value: 'SQL', skill: 'language' },
+    { value: 'R', skill: 'language' },
+    { value: 'Javascript', skill: 'language' },
+
+    // Frameworks/Libraries
+    { value: 'PyTorch', skill: 'library' },
+    { value: 'Django', skill: 'library' },
+    { value: 'Vue.js', skill: 'library' },
+    { value: 'RShiny', skill: 'library' },
+
+    // Machine Learning
+    { value: 'Sentiment Analysis', skill: 'ml' },
+    { value: 'Generative AI', skill: 'ml' },
+    { value: 'NLP', skill: 'ml' },
+    { value: 'Model Deployment (RShiny Apps)', skill: 'ml' },
+
+    // Cloud Platforms
+    { value: 'AWS', skill: 'cloud' },
+    { value: 'Lambda', skill: 'cloud' },
+    { value: 'EC2', skill: 'cloud' },
+    { value: 'S3', skill: 'cloud' },
+    { value: 'ECS', skill: 'cloud' },
+    { value: 'Docker', skill: 'cloud' },
+
+    // Software & DevOps
+    { value: 'Git', skill: 'software' },
+    { value: 'Github', skill: 'software' },
+    { value: 'Linux', skill: 'software' },
+    { value: 'REST APIs', skill: 'software' },
+    { value: 'SQL Server Management Studio', skill: 'software' },
+    { value: 'PostgreSQL', skill: 'software' },
+    { value: 'Adobe Suite', skill: 'software' },
+    { value: 'MO365', skill: 'software' },
+
+    // Data Visualization
+    { value: 'Power BI', skill: 'viz' },
+    { value: 'Tableau', skill: 'viz' },
+    { value: 'Gephi', skill: 'viz' },
+    { value: 'Power Query', skill: 'viz' },
+    { value: 'DAX', skill: 'viz' },
+
+    // Techniques
+    { value: 'Full-Stack Development', skill: 'technique' },
+    { value: 'Business Intelligence', skill: 'technique' },
+    { value: 'Data Warehousing', skill: 'technique' },
+    { value: 'UX/UI', skill: 'technique' },
+    { value: 'Data Pipelines', skill: 'technique' },
+    { value: 'Network Analysis', skill: 'technique' },
+];
+
+function filterSkillTags() {
+    if (this.selected == 'all') {
+        return this.skillTags;
+    }
+    return (this.skillTags.filter(item => item.skill == this.selected) )
 }
-// const opposites = [
-//     { status: 'Ordered', date: '15/10/2020 10:30', icon: 'pi pi-shopping-cart', color: '#9C27B0'},
-//     { status: 'Processing', date: '15/10/2020 14:00', icon: 'pi pi-cog', color: '#673AB7' },
-// ]
 
 </script>
 
@@ -84,7 +155,20 @@ function getTypeClass(type) {
 
                 </div>
                 <div class="rightcol">
-                    <h2>Tools</h2>
+                    <h2>Skills</h2>
+                    <div class="skills">
+                        <!-- <div>Selected: {{ selected }}</div> -->
+                        <select v-model="selected" class="customized-select">
+                            <option v-for="option in options" :key="option.value" :value="option.value">
+                                {{ option.text }}
+                            </option>
+                        </select>
+
+                        <div class="customized-tags">
+                            <Tag v-for="skill in filterSkillTags()" :value='skill.value'></Tag>
+                        </div>
+
+                    </div>
                 </div>
             </div>
             <div class="outercol">
@@ -113,14 +197,14 @@ function getTypeClass(type) {
 
 .outercol {
   flex: 20%;
-  border: 1px solid;
+  /* border: 1px solid; */
 }
 
 .innercol {
   display: flex;
   flex: 60%;
   /* padding: 10px; */
-  border: 1px solid;
+  /* border: 1px solid; */
 }
 
 .leftcol {
@@ -132,7 +216,7 @@ function getTypeClass(type) {
 .rightcol {
   flex: 33.3%; 
   display: inline-block; 
-  border: 1px solid;
+  /* border: 1px solid; */
 }
 
 .timeline {
@@ -164,6 +248,21 @@ function getTypeClass(type) {
 
 .event-year {
     opacity: 0.5;
+}
+
+.skills {
+    height: 1000px;
+    padding: 50px;
+}
+
+.customized-select {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.customized-tags .p-tag{
+    /* border: 1px solid; */
+    margin: 5px;
 }
 
 </style>
