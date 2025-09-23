@@ -16,10 +16,10 @@ const events = [
         description: 'I supported data science efforts focused on federal healthcare and defense initiatives. I developed dashboards to improve VA hiring, supply chain management, and strategic planning—briefing insights to senior leadership. I built NLP and geospatial tools, including the ACAGPM R package for particulate matter mapping and a sentiment analysis pipeline processing 100k+ news articles. My work also supported organizational network analysis and health equity efforts.' 
     },
     { title: '2025', date: '01/01/2025', type: 'year' },
-    { title: 'Paper: Anomolous Diffusion', date: '12/01/2024', icon: 'pi pi-cog', color: '#673AB7', type: 'project',
+    { title: 'Publication: Anomolous Diffusion', date: '12/01/2024', icon: 'pi pi-cog', color: '#673AB7', type: 'project',
         link: 'https://doi.org/10.1016/j.nuclphysb.2024.116779'
      },
-    { title: 'Paper: Hybrid System', date: '01/01/2024', icon: 'pi pi-cog', color: '#673AB7', type: 'project', 
+    { title: 'Publicaiton: Hybrid System', date: '01/01/2024', icon: 'pi pi-cog', color: '#673AB7', type: 'project', 
         link: 'https://ieeexplore.ieee.org/document/10407498'
      },
     { title: '2024', date: '01/01/2024', type: 'year' },

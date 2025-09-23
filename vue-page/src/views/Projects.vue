@@ -1,48 +1,49 @@
 <script setup>
 
-import Carousel from 'primevue/carousel'
+// import Carousel from 'primevue/carousel'
 import Card from 'primevue/card'
+import Button from 'primevue/button';
 import { ref } from 'vue'
 
-const responsiveOptions = ref([
-    {
-        breakpoint: '1400px',
-        numVisible: 2,
-        numScroll: 1
-    },
-    {
-        breakpoint: '1199px',
-        numVisible: 3,
-        numScroll: 1
-    },
-    {
-        breakpoint: '767px',
-        numVisible: 2,
-        numScroll: 1
-    },
-    {
-        breakpoint: '575px',
-        numVisible: 1,
-        numScroll: 1
-    }
-]);
+// const responsiveOptions = ref([
+//     {
+//         breakpoint: '1400px',
+//         numVisible: 2,
+//         numScroll: 1
+//     },
+//     {
+//         breakpoint: '1199px',
+//         numVisible: 3,
+//         numScroll: 1
+//     },
+//     {
+//         breakpoint: '767px',
+//         numVisible: 2,
+//         numScroll: 1
+//     },
+//     {
+//         breakpoint: '575px',
+//         numVisible: 1,
+//         numScroll: 1
+//     }
+// ]);
 
 const projects = [
 
-    { title: 'Apple', date: '', type: '',
-        description: '',
-        link: '',
-        img: ''
+    { title: 'Anomalous diffusion and factor ordering in (1+ 1)-dimensional Lorentzian quantum gravity', date: '12/17/2024', type: 'publication',
+        description: 'Authored by Elijah Sanderson (sandersone1@wit.edu), Rachel Lash Maitra (maitrar@wit.edu), AJ Liberatore (liberatorea94@gmail.com). Published in journal Nuclear Physics B on December 17, 2024.',
+        link: 'https://doi.org/10.1016/j.nuclphysb.2024.116779',
+        img: '/AJ_Portfolio/nuclearphysicsb.png'
      },
-     { title: 'Banana', date: '', type: '',
-        description: '',
-        link: '',
-        img: ''
+     { title: 'A Hybrid System Dynamics/Input-Output Model for Studying the Impact of Transportation Delays on the Resiliency of National Supply Chains', date: '01/31/2024', type: 'publication',
+        description: 'Authored by William S. Bland (wbland@mitre.org), Lissette Escobar (lescobar@mitre.org), Andrew E. Hong (ahong@mitre.org), Grace Kenneally (gkenneally@mitre.org), AJ Liberatore (liberatorea94@gmail.com), Scott L. Rosen (srosen@mitre.org). Published in journal Institute of Electronical and Electronics Engineers on Janyary 31, 2024.',
+        link: 'https://doi.org/10.1109/WSC60868.2023.10407498',
+        img: '/AJ_Portfolio/ieee.png'
      },
-     { title: 'Cookie', date: '', type: '',
-        description: '',
-        link: '',
-        img: ''
+     { title: 'ACAGPM', date: '05/01/2022', type: 'career',
+        description: 'R package authored by AJ Liberatore (liberatorea94@gmail.com) and Principal Investigator Hannah De los Santos, PhD (hdelossantos@mitre.org).',
+        link: 'https://github.com/mitre/ACAGPM',
+        img: '/AJ_Portfolio/mitre.png'
      },
      { title: 'Donut', date: '', type: '',
         description: '',
@@ -67,6 +68,10 @@ const projects = [
 
 ]
 
+function capitalizeFirstLetter(val) {
+    return String(val).charAt(0).toUpperCase() + String(val).slice(1);
+}
+
 </script>
 
 <template>
@@ -80,7 +85,7 @@ const projects = [
             <div class="innercol">
                 <h2>Take a look at my track record.</h2>
 
-                <div class="carousel">
+                <!-- <div class="carousel">
 
                     <Carousel :value="projects" :numVisible="3" :numScroll="1" :responsiveOptions="responsiveOptions" circular :autoplayInterval="5000">
                         <template #item="slotProps">
@@ -95,7 +100,7 @@ const projects = [
                         </template>
                     </Carousel>
 
-                </div>
+                </div> -->
 
                 <div class="filter">
                     <h3 style="text-align: right; font-weight: 600;">Filter:</h3>
@@ -113,11 +118,24 @@ const projects = [
                 <div class="cards">
 
                     <Card v-for="project in projects" class="card">
-                        <template #title>{{ project.title }}</template>
-                        <template #content>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque
-            quas!
-                        </template>
+                        
+                            <template #header v-if="project.img"> 
+                                <img :src=project.img :alt=project.title style="width: 100%; top: -50px; left: 0px; position: absolute;" />
+                            </template>
+                            <template #title>
+                                
+                                {{ project.title }}
+                                
+                            </template>
+                            <template #subtitle>
+                                {{ capitalizeFirstLetter(project.type) }}
+                            </template>
+                            <template #content>
+                                {{ project.description }}
+                            </template>
+                            <template #footer v-if="project.link">
+                                <Button as='a' icon="pi pi-link" :href=project.link target="_blank" style="color: black; background-color: transparent; border: 0px;" size="large"/>
+                            </template>
                     </Card>
 
                 </div>
@@ -161,7 +179,7 @@ const projects = [
     border: 2px solid #e7e7e7;
     margin: 5px;
     border-radius: 10px;
-    height: 400px
+    height: 600px
 }
 
 .filter {
@@ -180,9 +198,51 @@ const projects = [
 
 .card {
     margin: 10px;
-    flex-basis: calc(100% / 3 - (10px * 2)); /* px count must align with margin. */
+    width: calc(100% / 3 - (10px * 2)); /*px count must align with margin.*/
     box-sizing: border-box;
     border: 2px solid #e7e7e7;
+    height: 500px;
+    padding: 0px;
+    border-radius: 10px;
+    position: relative;
+    /* overflow: hidden; */
+}
+
+:deep(.card) .p-card-header {
+    /* border: 1px solid; */
+    height: 40%;
+    overflow: hidden;
+    position: relative;
+    border-radius: 10px 10px 0px 0px;
+}
+
+:deep(.card) .p-card-title {
+    /* border: 1px solid; */
+    font-size: 18px;
+    /* height: 50%; */
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+:deep(.card) .p-card-content {
+    /* border: 1px solid; */
+    font-size: 14px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+}
+
+:deep(.card) .p-card-footer {
+    position: absolute;
+    bottom: 0px;
+    left: 50%; 
+    transform: translateX(-50%);
+    padding: 10px;
 }
 
 </style>
