@@ -3,7 +3,7 @@
 // import Carousel from 'primevue/carousel'
 import Card from 'primevue/card'
 import Button from 'primevue/button';
-import { ref } from 'vue'
+import { ref, reactive } from 'vue'
 
 // const responsiveOptions = ref([
 //     {
@@ -30,46 +30,73 @@ import { ref } from 'vue'
 
 const projects = [
 
-    { title: 'Anomalous diffusion and factor ordering in (1+ 1)-dimensional Lorentzian quantum gravity', date: '12/17/2024', type: 'publication',
+    { title: 'Anomalous diffusion and factor ordering in (1+ 1)-dimensional Lorentzian quantum gravity', date: new Date('12/17/2024'), type: 'publication',
         description: 'Authored by Elijah Sanderson (sandersone1@wit.edu), Rachel Lash Maitra (maitrar@wit.edu), AJ Liberatore (liberatorea94@gmail.com). Published in journal Nuclear Physics B on December 17, 2024.',
         link: 'https://doi.org/10.1016/j.nuclphysb.2024.116779',
         img: '/AJ_Portfolio/nuclearphysicsb.png'
      },
-     { title: 'A Hybrid System Dynamics/Input-Output Model for Studying the Impact of Transportation Delays on the Resiliency of National Supply Chains', date: '01/31/2024', type: 'publication',
+     { title: 'A Hybrid System Dynamics/Input-Output Model for Studying the Impact of Transportation Delays on the Resiliency of National Supply Chains', date: new Date('01/31/2024'), type: 'publication',
         description: 'Authored by William S. Bland (wbland@mitre.org), Lissette Escobar (lescobar@mitre.org), Andrew E. Hong (ahong@mitre.org), Grace Kenneally (gkenneally@mitre.org), AJ Liberatore (liberatorea94@gmail.com), Scott L. Rosen (srosen@mitre.org). Published in journal Institute of Electronical and Electronics Engineers on Janyary 31, 2024.',
         link: 'https://doi.org/10.1109/WSC60868.2023.10407498',
         img: '/AJ_Portfolio/ieee.png'
      },
-     { title: 'ACAGPM', date: '05/01/2022', type: 'career',
+     { title: 'ACAGPM', date: new Date('05/01/2022'), type: 'career',
         description: 'R package authored by AJ Liberatore (liberatorea94@gmail.com) and Principal Investigator Hannah De los Santos, PhD (hdelossantos@mitre.org).',
         link: 'https://github.com/mitre/ACAGPM',
         img: '/AJ_Portfolio/mitre.png'
      },
-     { title: 'Donut', date: '', type: '',
-        description: '',
-        link: '',
-        img: ''
-     },
-     { title: 'Espresso', date: '', type: '',
-        description: '',
-        link: '',
-        img: ''
-     },
-     { title: 'Fudge', date: '', type: '',
-        description: '',
-        link: '',
-        img: ''
-     },
-     { title: 'Granola', date: '', type: '',
-        description: '',
-        link: '',
-        img: ''
-     },
+    //  { title: 'Donut', date: '', type: '',
+    //     description: '',
+    //     link: '',
+    //     img: ''
+    //  },
+    //  { title: 'Espresso', date: '', type: '',
+    //     description: '',
+    //     link: '',
+    //     img: ''
+    //  },
+    //  { title: 'Fudge', date: '', type: '',
+    //     description: '',
+    //     link: '',
+    //     img: ''
+    //  },
+    //  { title: 'Granola', date: '', type: '',
+    //     description: '',
+    //     link: '',
+    //     img: ''
+    //  },
 
 ]
 
+const typeArray = reactive(['all'])
+typeArray.push(...projects.map(project => project.type))
+const typeOptions = new Set(typeArray)
+
+const selectedType = ref('all')
+
+const yearArray = reactive(['all'])
+yearArray.push(...projects.map(project => project.date.getFullYear()))
+const yearOptions = new Set(yearArray)
+
+const selectedYear = ref('all')
+
 function capitalizeFirstLetter(val) {
     return String(val).charAt(0).toUpperCase() + String(val).slice(1);
+}
+
+function filterProjects() {
+
+    var projArray = [...this.projects];
+ 
+    if (this.selectedType != 'all') {
+        projArray = projArray.filter(item => item.type == this.selectedType) 
+    } 
+
+    if (this.selectedYear != 'all') {
+        projArray = projArray.filter(item => item.date.getFullYear() == this.selectedYear)
+    }
+
+    return projArray;
 }
 
 </script>
@@ -103,39 +130,53 @@ function capitalizeFirstLetter(val) {
                 </div> -->
 
                 <div class="filter">
+
                     <h3 style="text-align: right; font-weight: 600;">Filter:</h3>
-                    <select>
+
+                    <select v-model="selectedType">
                         <option value="" disabled selected>Please select type</option>
+                        <option v-for="option in typeOptions" :key="option" :value="option">
+                            {{ capitalizeFirstLetter(option) }}
+                        </option>
                     </select>
-                    <select>
+
+                    <select v-model="selectedYear">
                         <option value="" disabled selected>Please select year</option>
+                        <option v-for="option in yearOptions" :key="option" :value="option">
+                            {{ capitalizeFirstLetter(option) }}
+                        </option>
                     </select>
-                    <select>
+
+                    <!-- <select>
                         <option value="" disabled selected>Please select skill</option>
-                    </select>
+                    </select> -->
+
                 </div>
                     
                 <div class="cards">
 
-                    <Card v-for="project in projects" class="card">
+                    <Card v-for="project in filterProjects()" class="card">
                         
                             <template #header v-if="project.img"> 
                                 <img :src=project.img :alt=project.title style="width: 100%; top: -50px; left: 0px; position: absolute;" />
                             </template>
+
                             <template #title>
-                                
                                 {{ project.title }}
-                                
                             </template>
+
                             <template #subtitle>
                                 {{ capitalizeFirstLetter(project.type) }}
                             </template>
+
                             <template #content>
                                 {{ project.description }}
                             </template>
+
                             <template #footer v-if="project.link">
                                 <Button as='a' icon="pi pi-link" :href=project.link target="_blank" style="color: black; background-color: transparent; border: 0px;" size="large"/>
                             </template>
+
                     </Card>
 
                 </div>
