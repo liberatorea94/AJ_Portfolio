@@ -1,6 +1,6 @@
 ### Under Construction as of 09/2025
 # AJ_Portfolio
-A portfolio containing data science and research projects. I can be reached via [LinkedIn](https://www.linkedin.com/in/aj-liberatore-118b551a0/) or email (liberatorea94@gmail.com). A copy of my resume can viewed [here](https://github.com/liberatorea94/AJ_Portfolio/blob/3f619052f5230c3dd9b8dbc787c245fb2712d74d/images/Online%20Resume%20092025.pdf), up to date with September 2025.
+A portfolio containing data science and research projects. I can be reached via [LinkedIn](https://www.linkedin.com/in/aj-liberatore-118b551a0/) or email (liberatorea94@gmail.com). A copy of my resume can viewed [here](https://github.com/liberatorea94/AJ_Portfolio/blob/main/images/Online%20Resume%20092025.pdf), up to date with September 2025.
 
 ## About AJ
 AJ Liberatore is a professional data scientist who has specialized in business intelligence and investigative analytics. In previous roles, he has taken on a variety of projects, most notably including the support of VA hiring, training, and project management initiatives as well as contributions to numerous public healthcare programs. 
