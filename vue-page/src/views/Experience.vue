@@ -10,10 +10,10 @@ import { ref } from 'vue';
 
 const events = [
     { title: 'Current Day', date: '09/01/2025', icon: 'pi pi-shopping-cart', color: '#9C27B0', type: 'career',
-        description: 'Looking for my next opportunity to make a difference.'
+        description: 'Looking for my next opportunity to make a difference. Reach out!'
      },
     { title: 'MITRE: Data Scientist', date: '04/01/2025', icon: 'pi pi-cog', color: '#673AB7', type: 'career', 
-        description: 'I supported data science efforts focused on federal healthcare and defense initiatives. I developed dashboards to improve VA hiring, supply chain management, and strategic planning—briefing insights to senior leadership. I built NLP and geospatial tools, including the ACAGPM R package for particulate matter mapping and a sentiment analysis pipeline processing 100k+ news articles. My work also supported organizational network analysis and health equity efforts.' 
+        description: '2 years after I joined MITRE, in May 2023, I was promoted to Data Scientist. I continued to grow and produce valuable work, acting as a SME for Power BI related tasks. I developed and deployed RShiny dashboards in AWS to support defense and internal collaboration intiatives, including an organizational nework analysis at MITRE. Additionally, I led development of a Django + Vue.js supply chain dashoard, integrating machine learning outputs into interactive visuals while mentoring an intern. I wrapped up my time at MITRE with work on data management plans for sponsors, and analysis of large-scale VA medical/surgical supply chain data. For the latter, I produced weekly reports to identify trends and drive policy updates that improve efficiency and reduce waste.'
     },
     { title: '2025', date: '01/01/2025', type: 'year' },
     { title: 'Publication: Anomolous Diffusion', date: '12/01/2024', icon: 'pi pi-cog', color: '#673AB7', type: 'project',
@@ -24,12 +24,12 @@ const events = [
      },
     { title: '2024', date: '01/01/2024', type: 'year' },
     { title: 'MITRE: Associate Data Scientist', date: '05/01/2023', icon: 'pi pi-cog', color: '#673AB7', type: 'career',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+        description: 'In May 2021, I joined MITRE as an Associate Data Scientist. In my first role out of undergrad, I quickly made impactful contributions, leading the development of dashboards and data tools for federal sponsors including Power BI solutions used by VA senior leadership and the CDC. I tackled problems related to social determinants of health, visualizing environmental and health indicators, and developing the ACAGPM R package to assist other researchers. I also gained experience with intricate machine learning workflows, creating an NLP sentiment analysis pipeline and assisting in implementation of a staffing prediction algorithm.'
      },
     { title: '2023', date: '01/01/2023', type: 'year' },
     { title: '2022', date: '01/01/2022', type: 'year' },
     { title: 'Wentworth: Undergraduate', date: '08/01/2021', icon: 'pi pi-shopping-cart', color: '#FF9800', type: 'career', 
-        description: 'I attended Wentworth Institute of technology, where I am pursued a Bachelor of Science in Applied Mathematics and a minor in Data Science. Alongside my role as a student, I was a peer tutor sophomore year thru graduation, assisting others with succeeding in their mathematics courses. I also conducting research in collaboration with a professor and peer on the topic of quantum gravity, with the aims of making new discoveries in the field related to dimensional reduction.'
+        description: 'I attended Wentworth Institute of technology, where I pursued a Bachelor of Science in Applied Mathematics and a minor in Data Science. Alongside my role as a student, I was a peer tutor sophomore year through graduation, assisting others with succeeding in their mathematics courses. I also conducted research in collaboration with a professor and peer on the topic of quantum gravity, with the aims of making new discoveries in the field related to dimensional reduction.'
      },
      { title: '2021', date: '01/01/2021', type: 'year' },
      { title: '2020', date: '01/01/2020', type: 'year' },
