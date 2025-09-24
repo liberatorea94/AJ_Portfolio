@@ -25,14 +25,41 @@ import { RouterLink, RouterView } from 'vue-router'
     </div>
   
     <!--  -->
-    <main>
-      <RouterView />
+    <main style="overflow: hidden;">
+      <!-- <RouterView /> -->
+      <router-view v-slot="{ Component }">
+        <Transition name="fade" mode="out-in">
+          <component :is="Component" />
+        </Transition>
+      </router-view>
     </main>
 
   </div>
 </template>
 
 <style scoped>
+
+/* Entering state of the new component */
+    .fade-enter-from {
+      opacity: 0;
+      transform: translateY(-5px);
+    }
+
+    /* Active entering transition */
+    .fade-enter-active {
+      transition: all 0.3s ease-out;
+    }
+
+    /* Leaving state of the old component */
+    .fade-leave-to {
+      opacity: 0;
+      transform: translateY(5px);
+    }
+
+    /* Active leaving transition */
+    .fade-leave-active {
+      transition: all 0.3s ease-in;
+    }
 
 .container {
   /* margin: 5px; */
@@ -99,10 +126,15 @@ import { RouterLink, RouterView } from 'vue-router'
   font-weight: 600;
   padding-top: .5rem;
   padding-bottom: .5rem;
-  margin-inline: 5px;
+  margin-inline: 10px;
   /* border: 1px solid; */
   /* background-color: #e7e7e7; */
   /* border-radius: 10px; */
+}
+
+.main-nav a.router-link-exact-active {
+  border-bottom: 3px solid #3EB489; /* Your desired border color */
+  /* box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.35); */
 }
 
 /* .logo {

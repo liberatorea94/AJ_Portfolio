@@ -131,7 +131,7 @@ function filterSkillTags() {
             </div>
             <div class="innercol">
                 <div class="leftcol">
-                    <h2>What, Where, When, & Why</h2>
+                    <p style="font-weight: 600; font-size: 24px; text-align: center;">What, Where, When, & Why</p>
                     <div class="timeline">
 
                         
@@ -144,7 +144,7 @@ function filterSkillTags() {
                             </template>
                             <template #opposite="slotProps">
                                 <div :class="{'transparent-div': slotProps.item.type === 'career', 'event-year': slotProps.item.type === 'year'}" >
-                                    <a v-if="slotProps.item.link" :href="slotProps.item.link" target="_blank">{{ slotProps.item.title }}</a>
+                                    <a v-if="slotProps.item.link" :href="slotProps.item.link" target="_blank" style="color: #3EB489;">{{ slotProps.item.title }}</a>
                                     <div v-else>{{ slotProps.item.title }}</div>
                                 </div>
                             </template>
@@ -155,7 +155,7 @@ function filterSkillTags() {
 
                 </div>
                 <div class="rightcol">
-                    <h2>How</h2>
+                    <p style="font-weight: 600; font-size: 24px; text-align: center;">How</p>
                     <div class="skills">
                         <select v-model="selected" class="customized-select">
                             <option v-for="option in options" :key="option.value" :value="option.value">
@@ -265,11 +265,21 @@ function filterSkillTags() {
 .customized-select {
     text-align: center;
     margin-bottom: 15px;
+    font-family: "Roboto Slab", serif;
+    font-size: 14px;
 }
+
+/* .customized-select .option {
+    font-weight: 900;
+} */
 
 .customized-tags .p-tag{
     /* border: 1px solid; */
     margin: 5px;
+    color: white;
+    background-color: #3EB489;
+    box-shadow:0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+    /* border: 1px solid #3EB489; */
 }
 
 </style>

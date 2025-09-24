@@ -110,7 +110,7 @@ function filterProjects() {
                 <!-- Outer -->
             </div>
             <div class="innercol">
-                <h2>Take a look at my track record.</h2>
+                <p style="font-weight: 600; font-size: 24px; text-align: center;">Take a look at my track record.</p>
 
                 <!-- <div class="carousel">
 
@@ -133,14 +133,14 @@ function filterProjects() {
 
                     <h3 style="text-align: right; font-weight: 600;">Filter:</h3>
 
-                    <select v-model="selectedType">
+                    <select v-model="selectedType" class="customized-select">
                         <option value="" disabled selected>Please select type</option>
                         <option v-for="option in typeOptions" :key="option" :value="option">
                             {{ capitalizeFirstLetter(option) }}
                         </option>
                     </select>
 
-                    <select v-model="selectedYear">
+                    <select v-model="selectedYear" class="customized-select">
                         <option value="" disabled selected>Please select year</option>
                         <option v-for="option in yearOptions" :key="option" :value="option">
                             {{ capitalizeFirstLetter(option) }}
@@ -174,7 +174,7 @@ function filterProjects() {
                             </template>
 
                             <template #footer v-if="project.link">
-                                <Button as='a' icon="pi pi-link" :href=project.link target="_blank" style="color: black; background-color: transparent; border: 0px;" size="large"/>
+                                <Button as='a' icon="pi pi-link" :href=project.link target="_blank" style="color: #3EB489; background-color: transparent; border: 0px;" size="large"/>
                             </template>
 
                     </Card>
@@ -233,6 +233,13 @@ function filterProjects() {
     flex: 1;
 }
 
+.customized-select {
+    text-align: center;
+    margin-bottom: 15px;
+    font-family: "Roboto Slab", serif;
+    font-size: 14px;
+}
+
 .cards {
     display: flex;
     flex-wrap: wrap;
@@ -247,7 +254,8 @@ function filterProjects() {
     padding: 0px;
     border-radius: 10px;
     position: relative;
-    /* overflow: hidden; */
+    
+    /* box-shadow: none; */
 }
 
 :deep(.card) .p-card-header {

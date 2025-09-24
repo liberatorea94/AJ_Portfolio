@@ -11,21 +11,21 @@
             </div>
             <div class="innercol">
                 <div class="leftcol">
-                    <img src="/AJ_Portfolio/profile_placeholder.png" alt="Handsome Fella" width="60%" style="border-radius: 10px;"/>
-                    <p style="font-weight: bold;">Get in touch!</p>
-                    <a href="mailto:liberatorea94@gmail.com" target="_blank" class="email">
+                    <img src="/AJ_Portfolio/profile_photo.png" alt="Handsome Fella" width="60%" style="border-radius: 10px; border: 2px solid #e7e7e7; box-shadow:0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);"/>
+                    <p style="font-weight: 600;">Get in touch!</p>
+                    <a href="mailto:liberatorea94@gmail.com" target="_blank" class="email" style="color: #3EB489;"> 
                         <div>
                             <img src="/AJ_Portfolio/email.svg" alt="Email Me" width="20%" />
                         </div>
                         <p>Email</p>
                     </a>
-                    <a href="https://www.linkedin.com/in/aj-liberatore-118b551a0" target="_blank" class="linkedin">
+                    <a href="https://www.linkedin.com/in/aj-liberatore-118b551a0" target="_blank" class="linkedin" style="color: #3EB489;">
                         <div>
                             <img src="/AJ_Portfolio/linkedin.png" alt="Add me on Linkedin" width="20%"  />
                         </div>
                         <p >Linkedin</p>
                     </a>
-                    <a href="https://github.com/liberatorea94" target="_blank" class="github">
+                    <a href="https://github.com/liberatorea94" target="_blank" class="github" style="color: #3EB489;">
                         <div>
                             <img src="/AJ_Portfolio/github.svg" alt="View my github" width="20%" />
                         </div>
@@ -33,10 +33,10 @@
                     </a>
                 </div>
                 <div class="rightcol">
-                    <h2>Hi! I'm AJ.</h2>
-                    <p>AJ Liberatore is a professional data scientist who has specialized in business intelligence and investigative analytics. In previous roles, he has taken on a variety of projects, most notably including the support of VA hiring, training, and project management initiatives as well as contributions to numerous public healthcare programs.</p>
-                    <p>At his alma mater Wentworth, he conducted research with professors and peers to investigate dimensional reduction in quantum gravity via diffusion which culminated in a January 2025 publication, took up several roles as a tutor, and graduated with high honors earning a bachelor’s of science in applied mathematics with a minor in data science.</p>
-                    <p>In his free time, AJ pursues personal training and fitness, competing in bodybuilding contests since April 2023 and offering online coaching services to help others reach their goals while promoting health and wellness.</p>
+                    <p style="font-weight: 600; font-size: 24px; text-align: center;">Hi! I'm AJ.</p>
+                    <p>I am a professional data scientist who has specialized in business intelligence and investigative analytics. In previous roles, I took on a variety of projects, most notably including the support of VA hiring, training, and project management initiatives as well as contributions to numerous public healthcare programs.</p>
+                    <p>At my alma mater Wentworth Institute of Technology, I conducted research with professors and peers to investigate dimensional reduction in quantum gravity via diffusion which culminated in a January 2025 publication. I also took up several roles as a tutor, and graduated with high honors earning a bachelor’s of science in applied mathematics with a minor in data science.</p>
+                    <p>In my free time, I pursue personal training and fitness, competing in bodybuilding contests since April 2023 and offering online coaching services to help others reach their goals while promoting health and wellness.</p>
                 </div>
             </div>
             <div class="outercol">
