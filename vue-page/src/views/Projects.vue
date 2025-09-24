@@ -86,14 +86,14 @@ function capitalizeFirstLetter(val) {
 
 function filterProjects() {
 
-    var projArray = [...this.projects];
+    var projArray = [...projects];
  
-    if (this.selectedType != 'all') {
-        projArray = projArray.filter(item => item.type == this.selectedType) 
+    if (selectedType.value != 'all') {
+        projArray = projArray.filter(item => item.type == selectedType.value) 
     } 
 
-    if (this.selectedYear != 'all') {
-        projArray = projArray.filter(item => item.date.getFullYear() == this.selectedYear)
+    if (selectedYear.value != 'all') {
+        projArray = projArray.filter(item => item.date.getFullYear() == selectedYear.value)
     }
 
     return projArray;

@@ -46,6 +46,7 @@ const events = [
 // }
 
 const selected = ref('all')
+
 const options = [
     { text: 'All', value: 'all' }, 
     { text: 'Language', value: 'language' },
@@ -112,10 +113,14 @@ const skillTags = [
 ];
 
 function filterSkillTags() {
-    if (this.selected == 'all') {
-        return this.skillTags;
+    
+    var tagArray = [...skillTags];
+
+    if (selected.value != 'all') {
+        tagArray = tagArray.filter(item => item.skill == selected.value)
     }
-    return (this.skillTags.filter(item => item.skill == this.selected) )
+
+    return tagArray;
 }
 
 </script>

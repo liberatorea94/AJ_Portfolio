@@ -11,23 +11,23 @@
             </div>
             <div class="innercol">
                 <div class="leftcol">
-                    <img src="/AJ_Portfolio/profile_photo.png" alt="Handsome Fella" width="60%" style="border-radius: 10px; border: 2px solid #e7e7e7; box-shadow:0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);"/>
+                    <img src="/profile_photo.png" alt="Handsome Fella" width="60%" style="border-radius: 10px; border: 2px solid #e7e7e7; box-shadow:0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);"/>
                     <p style="font-weight: 600;">Get in touch!</p>
                     <a href="mailto:liberatorea94@gmail.com" target="_blank" class="email" style="color: #3EB489;"> 
                         <div>
-                            <img src="/AJ_Portfolio/email.svg" alt="Email Me" width="20%" />
+                            <img src="/email.svg" alt="Email Me" width="20%" />
                         </div>
                         <p>Email</p>
                     </a>
                     <a href="https://www.linkedin.com/in/aj-liberatore-118b551a0" target="_blank" class="linkedin" style="color: #3EB489;">
                         <div>
-                            <img src="/AJ_Portfolio/linkedin.png" alt="Add me on Linkedin" width="20%"  />
+                            <img src="/linkedin.png" alt="Add me on Linkedin" width="20%"  />
                         </div>
                         <p >Linkedin</p>
                     </a>
                     <a href="https://github.com/liberatorea94" target="_blank" class="github" style="color: #3EB489;">
                         <div>
-                            <img src="/AJ_Portfolio/github.svg" alt="View my github" width="20%" />
+                            <img src="/github.svg" alt="View my github" width="20%" />
                         </div>
                         <p>Github</p>
                     </a>
