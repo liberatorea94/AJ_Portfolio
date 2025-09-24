@@ -4,14 +4,14 @@
 
 <template>
     <div class="about">
-        <h1>About</h1>
+        <!-- <h1>About</h1> -->
         <div class="container">
             <div class="outercol">
                 <!-- Outer -->
             </div>
             <div class="innercol">
                 <div class="leftcol">
-                    <img src="/AJ_Portfolio/profile_placeholder.png" alt="Handsome Fella" width="80%" style="border-radius: 10px;"/>
+                    <img src="/AJ_Portfolio/profile_placeholder.png" alt="Handsome Fella" width="60%" style="border-radius: 10px;"/>
                     <p style="font-weight: bold;">Get in touch!</p>
                     <a href="mailto:liberatorea94@gmail.com" target="_blank" class="email">
                         <div>
@@ -33,7 +33,7 @@
                     </a>
                 </div>
                 <div class="rightcol">
-                    <h2>My Story</h2>
+                    <h2>Hi! I'm AJ.</h2>
                     <p>AJ Liberatore is a professional data scientist who has specialized in business intelligence and investigative analytics. In previous roles, he has taken on a variety of projects, most notably including the support of VA hiring, training, and project management initiatives as well as contributions to numerous public healthcare programs.</p>
                     <p>At his alma mater Wentworth, he conducted research with professors and peers to investigate dimensional reduction in quantum gravity via diffusion which culminated in a January 2025 publication, took up several roles as a tutor, and graduated with high honors earning a bachelor’s of science in applied mathematics with a minor in data science.</p>
                     <p>In his free time, AJ pursues personal training and fitness, competing in bodybuilding contests since April 2023 and offering online coaching services to help others reach their goals while promoting health and wellness.</p>
@@ -54,10 +54,13 @@
     /* box-sizing: border-box; */
     /* flex-wrap: wrap; */
     /* gap: 10px; */
+    
+  /* border: 1px solid; */
 }
 
 .container {
     display: flex;
+    
     /* height: 1000px; */
 }
 
@@ -69,7 +72,8 @@
 .innercol {
   display: flex;
   flex: 60%;
-  /* padding: 10px; */
+  margin-top: 50px;
+  /* overflow: hidden; */
   /* border: 1px solid; */
 }
 
@@ -83,10 +87,16 @@
   flex: 66.7%; 
   display: inline-block; 
   /* border: 1px solid; */
+  padding: 10px;
+  /* box-sizing: content-box; */
 }
 
 .rightcol p {
     font-size: 20px;
+    margin: 10px;
+    text-align: justify;
+    /* border: 1px solid; */
+    /* box-sizing: border-box; */
 }
 
 .email {

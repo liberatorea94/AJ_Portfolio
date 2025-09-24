@@ -10,7 +10,7 @@ import { RouterLink, RouterView } from 'vue-router'
     <!-- Upper skirt of the website with nav bar -->
     <div class="upperskirt">
       <div class="outercol">
-        <h2 class="title">AJ_Portfolio</h2>
+        <p class="title">AJ_Portfolio</p>
       </div>
       <div class="middlecol">
         <nav class="main-nav">
@@ -43,26 +43,48 @@ import { RouterLink, RouterView } from 'vue-router'
   left: 0;
   right: 0;
   bottom: 0;
+
+  overflow-y: auto;
+  scrollbar-gutter: stable;
+
+  /* Hide scrollbar for WebKit browsers (Chrome, Safari) */
+  &::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+
+  /* Hide scrollbar for Firefox */
+  scrollbar-width: none;
+
+  /* Hide scrollbar for Internet Explorer and Edge */
+  -ms-overflow-style: none;
+  /* padding-left: calc(100vw - 100%); */
 }
 
 .upperskirt {
-  background-color: #D3D3D3;
+  background-color: #e3e3e3;
+  display: flex;
+  align-items: center;
 }
 
 .outercol {
-  width: 33.3%;
+  flex: 33.3%;
   display: inline-block;
+  /* border: 1px solid; */
 }
 
 .middlecol {
-  width: 33.3%;
+  flex: 33.4%;
   display: inline-block;
+  /* border: 1px solid; */
 }
 
 .title {
   text-align: left;
   padding-left: 50px;
   color: #3EB489;
+  font-size: 30px;
+  font-weight: 400;
 }
 
 .main-nav {
@@ -74,11 +96,13 @@ import { RouterLink, RouterView } from 'vue-router'
   width: 170px;
   color: #3EB489;
   font-size: 30px;
+  font-weight: 600;
   padding-top: .5rem;
   padding-bottom: .5rem;
   margin-inline: 5px;
-  background-color: #e7e7e7;
-  border-radius: 10px;
+  /* border: 1px solid; */
+  /* background-color: #e7e7e7; */
+  /* border-radius: 10px; */
 }
 
 /* .logo {

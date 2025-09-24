@@ -123,7 +123,7 @@ function filterSkillTags() {
 <template>
 
     <div class="experience">
-        <h1>Experience</h1>
+        <!-- <h1>Experience</h1> -->
         <div class="container">
 
             <div class="outercol">
@@ -131,15 +131,15 @@ function filterSkillTags() {
             </div>
             <div class="innercol">
                 <div class="leftcol">
-                    <h2>Timeline</h2>
+                    <h2>What, Where, When, & Why</h2>
                     <div class="timeline">
 
-                        <!-- <Timeline :value="events"> -->
+                        
                         <Timeline :value="events" class="customized-timeline">
                             <template #content="slotProps" >
                                 <div :class="{'transparent-div': slotProps.item.type === 'project' || slotProps.item.type === 'year'}" >
                                     <h3> {{ slotProps.item.title }} </h3>
-                                    <p> {{ slotProps.item.description }} </p>
+                                    <p style="text-align: justify;"> {{ slotProps.item.description }} </p>
                                 </div>
                             </template>
                             <template #opposite="slotProps">
@@ -155,9 +155,8 @@ function filterSkillTags() {
 
                 </div>
                 <div class="rightcol">
-                    <h2>Skills</h2>
+                    <h2>How</h2>
                     <div class="skills">
-                        <!-- <div>Selected: {{ selected }}</div> -->
                         <select v-model="selected" class="customized-select">
                             <option v-for="option in options" :key="option.value" :value="option.value">
                                 {{ option.text }}
@@ -203,14 +202,17 @@ function filterSkillTags() {
 .innercol {
   display: flex;
   flex: 60%;
+  margin-top: 50px;
   /* padding: 10px; */
   /* border: 1px solid; */
+  
 }
 
 .leftcol {
   flex: 66.7%; 
   display: inline-block;
   /* border: 1px solid; */
+  
 }
 
 .rightcol {
@@ -222,11 +224,15 @@ function filterSkillTags() {
 .timeline {
     /* border: 1px solid; */
     height: 2000px;
+    display:inline-block;
+    /* overflow: hidden; */
+    /* width: 200px; */
 }
 
 .customized-timeline {
     /* border: 1px solid; */
     padding: 50px;
+    width:
 }
 
 :deep(.customized-timeline) .p-timeline-event {
@@ -253,6 +259,7 @@ function filterSkillTags() {
 .skills {
     height: 1000px;
     padding: 50px;
+    /* border: 1px solid; */
 }
 
 .customized-select {

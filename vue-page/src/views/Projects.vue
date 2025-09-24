@@ -103,7 +103,7 @@ function filterProjects() {
 
 <template>
     <div class="projects">
-        <h1>Projects</h1>
+        <!-- <h1>Projects</h1> -->
         <div class="container">
 
             <div class="outercol">
@@ -208,6 +208,7 @@ function filterProjects() {
 .innercol {
     /* display: flex; */
     flex: 60%;
+  margin-top: 50px;
     /* padding: 10px; */
     /* border: 1px solid; */
 }
