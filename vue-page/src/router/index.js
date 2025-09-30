@@ -9,7 +9,7 @@ import Resume from '../views/Resume.vue'
 const router = createRouter( {
 
     // history: createWebHistory('/AJ_Portfolio/'),
-    history: createWebHashHistory(),
+    history: createWebHashHistory('/AJ_Portfolio/'),
 
     routes: [
         // {path: '/home', name: 'Home', component: Home},
