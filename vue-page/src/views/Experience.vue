@@ -228,7 +228,7 @@ function filterSkillTags() {
 
 .timeline {
     /* border: 1px solid; */
-    height: 2000px;
+    /* height: 2000px; */
     display:inline-block;
     /* overflow: hidden; */
     /* width: 200px; */
