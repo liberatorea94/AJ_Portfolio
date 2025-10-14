@@ -123,6 +123,13 @@ function filterSkillTags() {
     return tagArray;
 }
 
+function isMobileUserAgent() {
+  const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+  return /(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino/i.test(userAgent) || /android|ipad|playbook|silk/i.test(userAgent);
+}
+
+const isMobile = isMobileUserAgent()
+
 </script>
 
 <template>
@@ -131,16 +138,16 @@ function filterSkillTags() {
         <!-- <h1>Experience</h1> -->
         <div class="container">
 
-            <div class="outercol">
+            <div class="outercol" :class="{'outercol-mobile': isMobile}">
                 <!-- Outer -->
             </div>
-            <div class="innercol">
-                <div class="leftcol">
+            <div class="innercol" :class="{'innercol-mobile': isMobile}">
+                <div class="leftcol" :class="{'leftcol-mobile': isMobile}">
                     <p style="font-weight: 600; font-size: 24px; text-align: center;">What, Where, When, & Why</p>
                     <div class="timeline">
 
                         
-                        <Timeline :value="events" class="customized-timeline">
+                        <Timeline :value="events" class="customized-timeline" :class="{'customized-timeline-mobile': isMobile}">
                             <template #content="slotProps" >
                                 <div :class="{'transparent-div': slotProps.item.type === 'project' || slotProps.item.type === 'year'}" >
                                     <h3> {{ slotProps.item.title }} </h3>
@@ -159,9 +166,9 @@ function filterSkillTags() {
                     </div>
 
                 </div>
-                <div class="rightcol">
+                <div class="rightcol" :class="{'rightcol-mobile': isMobile}">
                     <p style="font-weight: 600; font-size: 24px; text-align: center;">How</p>
-                    <div class="skills">
+                    <div class="skills" :class="{'skills-mobile': isMobile}">
                         <select v-model="selected" class="customized-select">
                             <option v-for="option in options" :key="option.value" :value="option.value">
                                 {{ option.text }}
@@ -175,7 +182,7 @@ function filterSkillTags() {
                     </div>
                 </div>
             </div>
-            <div class="outercol">
+            <div class="outercol" :class="{'outercol-mobile': isMobile}">
                 <!-- Outer -->
             </div>
 
@@ -204,6 +211,10 @@ function filterSkillTags() {
   /* border: 1px solid; */
 }
 
+.outercol-mobile {
+    flex: 5%;
+}
+
 .innercol {
   display: flex;
   flex: 60%;
@@ -213,6 +224,12 @@ function filterSkillTags() {
   
 }
 
+.innercol-mobile {
+    flex: 90%;
+    margin-top: 10px;
+    flex-direction: column;
+}
+
 .leftcol {
   flex: 66.7%; 
   display: inline-block;
@@ -220,11 +237,22 @@ function filterSkillTags() {
   
 }
 
+.leftcol-mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .rightcol {
   flex: 33.3%; 
   display: inline-block; 
   /* border: 1px solid; */
 }
+
+.rightcol-mobile p {
+    margin-top: 0px;
+}
+
 
 .timeline {
     /* border: 1px solid; */
@@ -237,7 +265,14 @@ function filterSkillTags() {
 .customized-timeline {
     /* border: 1px solid; */
     padding: 50px;
-    width:
+    /* font-size: 14px; */
+    /* width: */
+}
+
+.customized-timeline-mobile {
+    font-size: 14px;
+    padding: 0px;
+    /* text-align: left; */
 }
 
 :deep(.customized-timeline) .p-timeline-event {
@@ -251,6 +286,8 @@ function filterSkillTags() {
 
 :deep(.customized-timeline) .p-timeline-event-content {
   flex: 2; /* Makes the content section larger */
+  /* border: 1px solid; */
+  /* padding-right: 0px; */
 }
 
 .transparent-div {
@@ -265,6 +302,11 @@ function filterSkillTags() {
     height: 1000px;
     padding: 50px;
     /* border: 1px solid; */
+}
+
+.skills-mobile {
+    height: 600px;
+    padding: 0px;
 }
 
 .customized-select {

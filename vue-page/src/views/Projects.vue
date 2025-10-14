@@ -99,6 +99,13 @@ function filterProjects() {
     return projArray;
 }
 
+function isMobileUserAgent() {
+  const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+  return /(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino/i.test(userAgent) || /android|ipad|playbook|silk/i.test(userAgent);
+}
+
+const isMobile = isMobileUserAgent()
+
 </script>
 
 <template>
@@ -106,10 +113,10 @@ function filterProjects() {
         <!-- <h1>Projects</h1> -->
         <div class="container">
 
-            <div class="outercol">
+            <div class="outercol" :class="{'outercol-mobile': isMobile}">
                 <!-- Outer -->
             </div>
-            <div class="innercol">
+            <div class="innercol" :class="{'innercol-mobile': isMobile}">
                 <p style="font-weight: 600; font-size: 24px; text-align: center;">Take a look at my track record.</p>
 
                 <!-- <div class="carousel">
@@ -155,22 +162,28 @@ function filterProjects() {
                     
                 <div class="cards">
 
-                    <Card v-for="project in filterProjects()" class="card">
+                    <Card v-for="project in filterProjects()" class="card" :class="{'card-mobile': isMobile}">
                         
                             <template #header v-if="project.img"> 
-                                <img :src=project.img :alt=project.title style="width: 100%; top: -50px; left: 0px; position: absolute;" />
+                                <img :src=project.img :alt=project.title style="width: 100%; top: -50px; left: 0px; position: absolute;" :class="{'p-card-header-mobile': isMobile}"/>
                             </template>
 
                             <template #title>
-                                {{ project.title }}
+                                <div :class="{'p-card-title-mobile': isMobile}">
+                                    {{ project.title }}
+                                </div>
                             </template>
 
                             <template #subtitle>
-                                {{ capitalizeFirstLetter(project.type) }}
+                                <div :class="{'p-card-subtitle-mobile': isMobile}">
+                                    {{ capitalizeFirstLetter(project.type) }}
+                                </div>
                             </template>
 
                             <template #content>
-                                {{ project.description }}
+                                <div :class="{'p-card-content-mobile': isMobile}">
+                                    {{ project.description }}
+                                </div>
                             </template>
 
                             <template #footer v-if="project.link">
@@ -182,7 +195,7 @@ function filterProjects() {
                 </div>
 
             </div>
-            <div class="outercol">
+            <div class="outercol" :class="{'outercol-mobile': isMobile}">
                 <!-- Outer -->
             </div>
         </div>
@@ -205,12 +218,22 @@ function filterProjects() {
     /* border: 1px solid; */
 }
 
+.outercol-mobile {
+    flex: 5%;
+}
+
 .innercol {
     /* display: flex; */
     flex: 60%;
   margin-top: 50px;
     /* padding: 10px; */
     /* border: 1px solid; */
+}
+
+.innercol-mobile {
+    flex: 90%;
+    margin-top: 10px;
+    flex-direction: column;
 }
 
 .carousel {
@@ -246,8 +269,9 @@ function filterProjects() {
 }
 
 .card {
+    /* px count must align with margin. */
     margin: 10px;
-    width: calc(100% / 3 - (10px * 2)); /*px count must align with margin.*/
+    width: calc(100% / 3 - (10px * 2));
     box-sizing: border-box;
     border: 2px solid #e7e7e7;
     height: 500px;
@@ -258,12 +282,22 @@ function filterProjects() {
     /* box-shadow: none; */
 }
 
+.card-mobile {
+    margin: 5px;
+    width: calc(100% / 2 - (5px * 2));
+    height: 300px;
+}
+
 :deep(.card) .p-card-header {
     /* border: 1px solid; */
     height: 40%;
     overflow: hidden;
     position: relative;
     border-radius: 10px 10px 0px 0px;
+}
+
+:deep(.card) .p-card-header {
+    height: 20%;
 }
 
 :deep(.card) .p-card-title {
@@ -277,6 +311,14 @@ function filterProjects() {
     -webkit-box-orient: vertical;
 }
 
+:deep(.card) .p-card-title-mobile {
+    font-size: 14px;
+}
+
+:deep(.card) .p-card-subtitle-mobile {
+    font-size: 12px;
+}
+
 :deep(.card) .p-card-content {
     /* border: 1px solid; */
     font-size: 14px;
@@ -284,6 +326,13 @@ function filterProjects() {
     overflow: hidden;
     display: -webkit-box;
     -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+}
+
+:deep(.card) .p-card-content-mobile {
+    font-size: 12px;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
 }
 
