@@ -93,7 +93,7 @@ const isMobile = isMobileUserAgent()
 
 .innercol-mobile {
     flex: 90%;
-    margin-top: 10px;
+    margin-top: 5%;
     flex-direction: column;
 }
 
